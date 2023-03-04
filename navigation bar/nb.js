@@ -1,7 +1,12 @@
-let bar = document.querySelector(".fa-bars");
-let menu = document.querySelector(".menu");
-let e = function(c) {
-    menu.classList.toggle("show-menu")
+let nav = document.querySelector(".nav")
+window.addEventListener('scroll', fixNav)
+
+function fixNav() {
+    if(window.scrollY > nav.offSetHeight + 150){
+        nav.classList.add("active")
+    }
+    else{
+        nav.classList.remove("active")
+    }
 }
-bar.addEventListener('Click' , e );
 
